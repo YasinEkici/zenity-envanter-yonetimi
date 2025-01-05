@@ -149,14 +149,25 @@ Ekran Görüntüleri
 ![Screenshot from 2025-01-05 20-40-47](https://github.com/user-attachments/assets/befa6f5f-c0e8-4510-be67-10e7215286b1)
 
     Ana Menü
+![Screenshot from 2025-01-05 20-42-12](https://github.com/user-attachments/assets/f44d64ee-3711-40f5-9e55-678bfc57053f)
 
     Ürün Listeleme (Örnek tablo görünümü)
+![Screenshot from 2025-01-05 20-42-57](https://github.com/user-attachments/assets/a98deaa4-bd58-4fa2-8707-2aab37e83ec6)
 
     Stok Hareketi
+![Screenshot from 2025-01-05 20-43-36](https://github.com/user-attachments/assets/a21ce75f-fb3b-4df5-97f1-386702cc97b8)
 
     Rapor Alma
+![Screenshot from 2025-01-05 20-44-07](https://github.com/user-attachments/assets/3587cb63-354a-4119-8bb0-ed092cee21b6)
 
     Kullanıcı Yönetimi
+![Screenshot from 2025-01-05 20-44-36](https://github.com/user-attachments/assets/20ce2d87-d0e7-4400-b30b-0a1c5a81e99f)
+
+    Hata Kayıtları Örneği
+  ![Screenshot from 2025-01-05 20-45-19](https://github.com/user-attachments/assets/6a3cbd01-93a7-46ac-aa8e-6e6083704d58)
+  
+
+    
 
 Sık Karşılaşılan Sorunlar
 
