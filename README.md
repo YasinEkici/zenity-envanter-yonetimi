@@ -172,13 +172,15 @@ Projedeki veriler CSV dosyalarında saklanır:
 ##Ekran Görüntüleri
 
     Giriş Ekranı
-![Screenshot from 2025-01-05 20-40-47](https://github.com/user-attachments/assets/befa6f5f-c0e8-4510-be67-10e7215286b1)
+![Screenshot from 2025-01-05 20-40-47](https://github.com/user-attachments/assets/c19bc012-ebc4-4bc5-8c3a-162da01c1af2)
+
 
     Ana Menü
-![Screenshot from 2025-01-05 20-42-12](https://github.com/user-attachments/assets/f44d64ee-3711-40f5-9e55-678bfc57053f)
+![Screenshot from 2025-01-05 20-42-12](https://github.com/user-attachments/assets/302c7b7d-1712-4ecf-830b-c29306cdb016)
 
     Ürün Listeleme (Örnek tablo görünümü)
-![Screenshot from 2025-01-05 20-42-57](https://github.com/user-attachments/assets/a98deaa4-bd58-4fa2-8707-2aab37e83ec6)
+![Screenshot from 2025-01-05 20-42-57](https://github.com/user-attachments/assets/9e3eb1cc-4f72-4d04-9603-d1aa9c2a27f9)
+
 
     Stok Hareketi
 ![Screenshot from 2025-01-05 20-43-36](https://github.com/user-attachments/assets/a21ce75f-fb3b-4df5-97f1-386702cc97b8)
