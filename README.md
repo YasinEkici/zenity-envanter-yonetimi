@@ -1,47 +1,84 @@
-Envanter Yönetim Sistemi (Zenity + Bash)
-
-Bu proje, Bash betikleri ve Zenity kütüphanesi kullanılarak oluşturulmuş basit bir Envanter Yönetim Sistemi örneğidir. 
-
 YouTube Videosu: https://www.youtube.com/watch?v=cLIV2NU-BiA
 
-Projede aşağıdaki fonksiyonları gerçekleştirebilen bir grafik arayüz (GUI) sunulur:
+Envanter Yönetim Sistemi 
 
-    Ürün Yönetimi (Ekle / Listele / Güncelle / Sil)
-    Stok Hareketleri (Giriş / Çıkış / Listeleme)
-    Raporlar (Stokta azalan ürünler, en yüksek stoklu ürünler, kategori bazlı, fiyat aralığı)
-    Kullanıcı Yönetimi (Yeni kullanıcı ekle, listele, güncelle, sil)
-    Program Yönetimi (Dosya yedekleme, disk alanı görüntüleme, log kayıtlarını gösterme)
+Bu proje, **Bash betikleri** ve **Zenity** kütüphanesini kullanarak oluşturulmuş basit bir **Envanter Yönetim Sistemi** örneğidir. Proje kapsamında:
 
-Ayrıca sistemde Yönetici ve Kullanıcı adlı iki farklı rol bulunur.
+- Ürün Yönetimi (Ekle/Listele/Güncelle/Sil)  
+- Stok Hareketi (Giriş/Çıkış/Listeleme)  
+- Raporlama (Stok Eşiği, Kategori, Fiyat Aralığı vb.)  
+- Kullanıcı Yönetimi (Ekle/Listele/Güncelle/Sil)  
+- Program Yönetimi (Disk Alanı, Yedekleme, Log Kayıtları)  
 
-    Yönetici: Tüm işlemleri yapabilir.
-    Kullanıcı: Yalnızca görüntüleme ve raporlama gibi sınırlı işlemleri yapabilir.
+gibi işlemler **Zenity** pencereleri ile bir **grafik arayüz** üzerinden yapılabilir. Sistemde **Yönetici** ve **Kullanıcı** rol ayrımı vardır. Yönetici tüm işlemleri yapabilir, kullanıcı sadece bazı görüntüleme/raporlama işlemleri yapabilir.
 
-İçindekiler
+---
 
-    Genel Özellikler
-    Proje Dosya Yapısı
-    Kurulum ve Çalıştırma
-    Kullanım Adımları
-    CSV Dosyaları
-    Ekran Görüntüleri (örnek placeholder)
-    Sık Karşılaşılan Sorunlar
-    Katkıda Bulunma
+## İçindekiler
 
-Genel Özellikler
+- [Özellikler](#özellikler)
+- [Proje Dosya Yapısı](#proje-dosya-yapısı)
+- [Kurulum ve Çalıştırma](#kurulum-ve-çalıştırma)
+- [Kullanım Adımları](#kullanım-adımları)
+- [CSV Dosyaları](#csv-dosyaları)
+- [Ekran Görüntüleri](#ekran-görüntüleri)
+- [Sık Karşılaşılan Sorunlar](#sık-karşılaşılan-sorunlar)
+- [Katkıda Bulunma](#katkıda-bulunma)
 
-    Zenity aracılığıyla masaüstü diyalog pencereleri kullanır.
-    Basit bir login ekranı ve kullanıcı yönetimi sunar.
-    CSV dosyalarını temel veri deposu olarak kullanır (veritabanı yok).
-    Stok giriş/çıkış işlemleri için ayrı bir menü vardır.
-    Raporlama modülünde çeşitli filtrelemeler yapılabilir (örnek: stok eşiği, kategori, fiyat aralığı).
-    Program Yönetimi bölümünde disk alanı gösterme, dosyaları yedekleme ve log görüntüleme işlemleri vardır.
-    Ani kapatma durumlarında (Ctrl + C vb.) trap mekanizmasıyla temizKapat fonksiyonu çağrılır, geçici dosyalar silinir ve log kayıtları güncellenir.
+---
 
+## Özellikler
 
-    main.sh: Projenin başlangıç dosyası. Giriş (login) ve ana menü burada yer alır.
-    moduller/ dizini: Her bir alt fonksiyonun (program yönetimi, ürün yönetimi vs.) kendi betiği bulunur.
-    .csv dosyaları: Uygulamanın veri depolama dosyaları.
+1. **Kullanıcı Girişi (Login)**  
+   - Varsayılan Yönetici: `admin / 12345` (MD5: `827ccb0eea8a706c4c34a16891f84e7b`)  
+   - 3 kez yanlış parola girildiğinde kullanıcı hesabı kilitlenir.  
+   - Yönetici kilidi kullanıcı güncelleme ekranından açabilir.
+
+2. **Ürün Yönetimi**  
+   - **Yönetici** rolünde: Ürün ekleme, stok/fiyat güncelleme, silme ve listeleme.  
+   - **Kullanıcı** rolünde: Sadece ürünleri listeleyebilir.
+
+3. **Stok Hareketi**  
+   - Stok girişi (ürün sayısını artırma) ve çıkışı (ürün sayısını azaltma)  
+   - İşlemler `hareket.csv` dosyasında kaydedilir.
+
+4. **Raporlar**  
+   - Stokta azalan ürünler (eşik değer altında)  
+   - En yüksek stoklu ürünler (eşik değer üzerinde)  
+   - Kategori bazlı rapor  
+   - Fiyat aralığı raporu
+
+5. **Kullanıcı Yönetimi**  
+   - Yeni kullanıcı ekleme, kullanıcı listeleme, kullanıcı güncelleme, silme.  
+   - Kullanıcı rolü (Yönetici/Kullanıcı), kilit durumu ve hata sayısı da takip edilir.
+
+6. **Program Yönetimi**  
+   - Disk alanı göster (depo.csv, kullanici.csv, log.csv, hareket.csv boyutu)  
+   - Dosyaları yedekleme  
+   - Hata kayıtlarını (log.csv) görüntüleme
+
+7. **Ani Kapatma Durumunda Temiz Çıkış**  
+   - `trap` ile `SIGINT` ve `SIGTERM` yakalanır.  
+   - `temizKapat` fonksiyonu devreye girer, `.tmp` dosyaları siler ve log kaydı alır.
+
+---
+
+## Proje Dosya Yapısı
+
+```bash
+proje-klasoru/
+├── main.sh                       # Ana betik, uygulamanın başlangıç dosyası
+├── moduller/
+│   ├── program_yonetimi.sh       # Program yönetimi (disk alanı, yedekleme, log gösterme)
+│   ├── urun_yonetimi.sh          # Ürün ekleme, listeleme, güncelleme, silme
+│   ├── rapor_al.sh               # Rapor alma modülü
+│   ├── hareket_yonetimi.sh       # Stok girişi/çıkışı, hareket kaydı
+│   └── kullanici_yonetimi.sh     # Kullanıcı ekleme, listeleme, güncelleme, silme
+├── depo.csv                      # Ürün kayıtları (no, ad, stok, fiyat, kategori)
+├── kullanici.csv                 # Kullanıcı bilgileri (no, username, ad, soyad, rol, md5_parola, kilit, deneme)
+├── log.csv                       # Hata ve kritik işlem log kayıtları
+└── hareket.csv                   # Stok hareketleri (giriş/çıkış)
+
 
 Kurulum ve Çalıştırma
 
