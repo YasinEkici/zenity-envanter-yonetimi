@@ -1,177 +1,181 @@
-Zenity ile Gelişmiş Envanter Yönetim Sistemi
+Basit Envanter Yönetim Sistemi (Zenity + Bash)
 
-Bu proje, Zenity kullanılarak oluşturulmuş kapsamlı bir envanter yönetim sistemi sunar. Kullanıcı dostu bir grafik arayüz ile ürünlerin, stok hareketlerinin ve kullanıcıların etkili bir şekilde yönetimini sağlar. Proje, Bash betikleri ile modüler şeklinde tasarlanmıştır ve çoklu dosya yapısıyla esnek bir kod tabanı sunar.
+Bu proje, Bash betikleri ve Zenity kütüphanesi kullanılarak oluşturulmuş basit bir Envanter Yönetim Sistemi örneğidir. Projede aşağıdaki fonksiyonları gerçekleştirebilen bir grafik arayüz (GUI) sunulur:
 
-Genel Bakış
+    Ürün Yönetimi (Ekle / Listele / Güncelle / Sil)
+    Stok Hareketleri (Giriş / Çıkış / Listeleme)
+    Raporlar (Stokta azalan ürünler, en yüksek stoklu ürünler, kategori bazlı, fiyat aralığı)
+    Kullanıcı Yönetimi (Yeni kullanıcı ekle, listele, güncelle, sil)
+    Program Yönetimi (Dosya yedekleme, disk alanı görüntüleme, log kayıtlarını gösterme)
+
+Ayrıca sistemde Yönetici ve Kullanıcı adlı iki farklı rol bulunur.
 
-Anahtar Özellikler
+    Yönetici: Tüm işlemleri yapabilir.
+    Kullanıcı: Yalnızca görüntüleme ve raporlama gibi sınırlı işlemleri yapabilir.
+
+İçindekiler
 
-Kapsamlı Ürün Yönetimi:
+    Genel Özellikler
+    Proje Dosya Yapısı
+    Kurulum ve Çalıştırma
+    Kullanım Adımları
+    CSV Dosyaları
+    Ekran Görüntüleri (örnek placeholder)
+    Sık Karşılaşılan Sorunlar
+    Katkıda Bulunma
 
-Yeni ürün ekleme, var olan ürünleri güncelleme ve silme.
+Genel Özellikler
 
-Ürünlerin detaylı listelemesi.
+    Zenity aracılığıyla masaüstü diyalog pencereleri kullanır.
+    Basit bir login ekranı ve kullanıcı yönetimi sunar.
+    CSV dosyalarını temel veri deposu olarak kullanır (veritabanı yok).
+    Stok giriş/çıkış işlemleri için ayrı bir menü vardır.
+    Raporlama modülünde çeşitli filtrelemeler yapılabilir (örnek: stok eşiği, kategori, fiyat aralığı).
+    Program Yönetimi bölümünde disk alanı gösterme, dosyaları yedekleme ve log görüntüleme işlemleri vardır.
+    Ani kapatma durumlarında (Ctrl + C vb.) trap mekanizmasıyla temizKapat fonksiyonu çağrılır, geçici dosyalar silinir ve log kayıtları güncellenir.
 
-Gelişmiş Kullanıcı Yönetimi:
+Proje Dosya Yapısı
+
+proje-klasoru/
+├── main.sh                       # Ana betik, uygulama burada başlatılıyor
+├── moduller/
+│   ├── program_yonetimi.sh       # Program yönetimi (yedek alma, disk alanı, log gösterme)
+│   ├── urun_yonetimi.sh          # Ürün ekle, listele, güncelle, sil
+│   ├── rapor_al.sh              # Rapor modülü (stok eşiği, fiyat aralığı vb.)
+│   ├── hareket_yonetimi.sh       # Stok giriş/çıkış yönetimi (hareket kayıtları)
+│   └── kullanici_yonetimi.sh     # Kullanıcı ekleme, listeleme, güncelle, sil
+├── depo.csv                      # Ürün kayıtları
+├── kullanici.csv                 # Kullanıcı bilgileri
+├── log.csv                       # Hata ve kritik işlemlerin kaydı
+└── hareket.csv                   # Stok hareket kayıtları
 
-Yeni kullanıcı ekleme, bilgilerini düzenleme ve silme.
+    main.sh: Projenin başlangıç dosyası. Giriş (login) ve ana menü burada yer alır.
+    moduller/ dizini: Her bir alt fonksiyonun (program yönetimi, ürün yönetimi vs.) kendi betiği bulunur.
+    .csv dosyaları: Uygulamanın veri depolama dosyaları.
 
-Kullanıcı yetkilendirme (Yönetici ve Kullanıcı rolleri).
+Kurulum ve Çalıştırma
 
-Detaylı Raporlama:
+    Zenity’nin kurulu olduğundan emin olun
+        Çoğu Linux dağıtımında ön yüklü gelir. Eğer eksikse, Ubuntu/Debian türevi sistemlerde:
 
-Stok durumu, fiyat aralığı ve stok hareketleriyle ilgili raporlar.
+    sudo apt-get install zenity
 
-Stok Hareketleri Yönetimi:
+Proje klasörünü klonlayın veya indirin
 
-Stok girişi, çıkışı ve hareket takibi.
+git clone https://github.com/kullanici-adi/envanter.git
+cd envanter
 
-Program Yönetimi:
+Dosyaya çalıştırma izni verin
 
-Disk alanını kontrol etme, dosyaları yedekleme ve hata kayıtlarını inceleme.
+chmod +x main.sh
 
-Proje Detayları
+main.sh betiğini çalıştırın
 
-Kullanılan Teknolojiler
+    ./main.sh
 
-Linux Shell: Bash betikleri ile sistem tasarımı.
+    Not: Projeyi ilk kez çalıştırdığınızda, kullanici.csv, depo.csv, log.csv ve hareket.csv yoksa otomatik oluşturulur. Ayrıca varsayılan bir yönetici kullanıcı (admin / 12345) tanımlanır.
 
-Zenity: Grafiksel arayüz oluşturmak için GNOME tabanlı bir aracı.
+Kullanım Adımları
 
-CSV Dosyaları: Veri saklama ve çekme için düzenli tablo yapısı.
+    Giriş Ekranı
+        Kullanıcı adı (örn. admin) ve parola (12345) girişi yapılır.
+        3 kez hatalı parola girilirse hesap kilitlenir.
+        Yönetici kilidini kullanıcı güncelleme ekranından açabilir.
 
-Komut Satırı Araçları: awk, grep, cut, sed gibi Linux komutları.
+    Ana Menü
+        Ürün İşlemleri (Ürün ekleme, listeleme, güncelleme, silme)
+        Stok Hareketi (Stok girişi, çıkışı, hareketleri listeleme)
+        Rapor Al (Azalan stok, yüksek stok, kategori/fiyat bazlı raporlar)
+        Kullanıcı Yönetimi (yeni ekle, listele, güncelle, sil)
+        Program Yönetimi (disk alanı göster, yedekleme, log görüntüleme)
+        Çıkış (programdan güvenli çıkış)
 
-Veri Yapısı
+    Ürün Ekle / Listele / Güncelle / Sil
+        Ürün Ekle: Ürün adı, stok, fiyat, kategori girilir. “No” alanı otomatik üretilir.
+        Ürün Listele: Tüm ürünler tablolu biçimde görünür.
+        Ürün Güncelle: Ürün adını girerek stok/fiyat değerlerini değiştirebilirsiniz.
+        Ürün Sil: Ürün adını girerek ilgili ürünü CSV’den silersiniz.
+        Sadece Yönetici rolü bu işlemleri yapabilir, normal kullanıcı listeleme haricinde işlem yapamaz.
 
-depo.csv: Ürün bilgilerinin saklandığı dosya.
+    Stok Hareketi
+        Stok Girişi: Bir ürün no ve miktar girerek stok arttırabilirsiniz.
+        Stok Çıkışı: Var olan stoktan çıkarma (satış vb.) işlemi.
+        Hareketleri Listele: Tüm giriş/çıkış hareketlerini tablo şeklinde görüntüler.
 
-kullanici.csv: Kullanıcı verilerini tutan dosya.
+    Rapor Al
+        Stokta Azalan Ürünler: Kullanıcıdan bir eşik değer istenir ve o eşiğin altındaki stoklar listelenir.
+        En Yüksek Stoklu Ürünler: Bir üst eşik girerek o değerin üstündeki stokları listeler.
+        Kategori Bazlı Rapor: İstenen kategorideki tüm ürünleri sunar.
+        Fiyat Aralığı Raporu: Minimum / maksimum fiyat aralığında ürünleri listeler.
 
-log.csv: Sistem hatalarını kayıt altına alır.
+    Kullanıcı Yönetimi
+        Yeni Kullanıcı Ekle: Kullanıcı adı, ad, soyad, rol, parola (md5) girilir.
+        Kullanıcıları Listele: Hepsi tablolu biçimde gözükür.
+        Kullanıcı Güncelle: Mevcut bir kullanıcıyı (no ile) arayarak ad, soyad, rol, kilitli mi vb. bilgilerini değiştirebilirsiniz.
+        Kullanıcı Sil: No ile bulup silebilirsiniz.
 
-hareket.csv: Stok hareket bilgilerini saklar.
+    Program Yönetimi
+        Diskteki Toplam Alanı Göster: depo.csv, kullanici.csv, log.csv ve hareket.csv dosyalarının toplam boyutunu ekrana getirir.
+        Diske Yedekle: Bu üç (veya dört) CSV dosyasını belirttiğiniz klasöre .bak uzantısıyla kopyalar.
+        Hata Kayıtlarını Göster: log.csv içeriğini tablolu biçimde gösterir.
 
-Ana Betik Dosyaları
+CSV Dosyaları
 
-main.sh
+Projedeki veriler CSV dosyalarında saklanır:
 
-Sistemin ana giriş ve menü yönetim dosyası.
+    depo.csv
+        Format: no,urun_adi,stok,birim_fiyat,kategori
+        Ürün numarası (no) otomatik artar. Ürün adı + kategori kombinasyonu tekil kabul edilir.
 
-urun_yonetimi.sh
+    kullanici.csv
+        Format: kullanici_no,username,ad,soyad,rol,md5_parola,kilitli_mi,deneme_sayisi
+        Yeni kullanıcı eklendiğinde max kullanici_no + 1 olacak şekilde kaydedilir.
+        kilitli_mi: evet veya hayir. 3 kez hatalı giriş yaparsa evet olur.
+        deneme_sayisi: Hatalı parola deneme adedi tutulur.
 
-Ürün ekleme, silme ve güncelleme işlemleri.
+    log.csv
+        Format: hata_numarası,tarih_saat,kullanıcı_adı,işlem,mesaj
+        Hata ve kritik durumlarda (ürün silme, aynı adlı ürün ekleme vb.) buraya ek satır yazar.
 
-rapor_al.sh
+    hareket.csv
+        Format: hareket_no,urun_no,islem_tarihi,tip,adet,kullanici
+        Stok hareketleri (giriş / çıkış) bu dosyada tutulur.
+        tip: giris veya cikis.
+        hareket_no otomatik artar.
 
-Çeşitli raporlar oluşturma.
+Ekran Görüntüleri
 
-program_yonetimi.sh
+(Aşağıdaki görseller örnektir; kendi projenizi çalıştırdığınızda Ekran Görüntüsü alıp bu bölüme ekleyebilirsiniz.)
 
-Disk kullanımı, yedekleme ve hata kayıtları işlemleri.
+    Giriş Ekranı
 
-kullanici_yonetimi.sh
+    Ana Menü
 
-Kullanıcı işlemleri.
+    Ürün Listeleme (Örnek tablo görünümü)
 
-hareket_yonetimi.sh
+    Stok Hareketi
 
-Stok hareketlerinin giriş ve çıkış yönetimi.
+    Rapor Alma
 
-Fonksiyonların Detaylı Açıklaması
+    Kullanıcı Yönetimi
 
-1. Ürün Yönetimi
+Sık Karşılaşılan Sorunlar
 
-1.1 Ürün Ekleme
+    “Admin” olarak giriş yapamıyorum
+        kullanici.csv içinde 2. sütundaki username değeri “admin” mi kontrol edin. Parola 12345 (MD5: 827ccb0eea8a706c4c34a16891f84e7b) olmalı.
+    Boş CSV dosyası sorunları
+        depo.csv ve kullanici.csv ilk kez oluşturulurken başlık satırı yoktur, ancak script çalışmayı sürdürür.
+    Stok çıkışı yapılırken “stok yetersiz” hatası
+        eskiStok değerini kontrol edin; çıkış miktarından küçükse bu hatayı alırsınız.
+    Zaman zaman tablo hizaları kayık görünüyor
+        column -t -s "," komutu ile veriler “virgüle göre hizalanır”. Her satırda aynı sütun sayısı olmasına dikkat edin.
 
-Zenity Form: Kullanıcıdan ürün adı, stok ve fiyat bilgileri istenir.
+Katkıda Bulunma
 
-CSV Yazımı: Girilen bilgiler depo.csv dosyasına eklenir.
+    Projeyi klonlayarak ya da forkladıktan sonra pull request gönderebilirsiniz.
+    Yeni rapor türleri, ek validasyon kuralları veya arayüz iyileştirmeleri memnuniyetle karşılanır.
+    Hata veya önerileriniz için issue açabilirsiniz.
 
-1.2 Ürün Listeleme
+Teşekkürler! Bu basit envanter yönetim sistemi örneğini geliştirirken keyif alacağınızı umuyoruz. Bash ve Zenity ile daha büyük projeler yapabilmek için bu örneği başlangıç noktası olarak kullanabilirsiniz.
 
-Zenity Text-Info: Tüm ürün bilgileri gösterilir.
-
-1.3 Ürün Güncelleme
-
-ID Bazlı Arama: Güncellenecek ürün ID'siyle aranır.
-
-Zenity Form: Yeni stok ve fiyat bilgileri alınır.
-
-CSV Güncellemesi: Mevcut satır yeni bilgilerle değiştirilir.
-
-1.4 Ürün Silme
-
-Onay Mekanizması: Silme işlemi onaylanır.
-
-CSV Filtreleme: Ürün ilgili dosyadan kaldırılır.
-
-2. Kullanıcı Yönetimi
-
-2.1 Kullanıcı Ekleme
-
-Kullanıcı bilgileri alınır ve MD5 hash ile parola şifrelenir.
-
-Yeni kullanıcı CSV'ye kaydedilir.
-
-2.2 Kullanıcı Listeleme
-
-Tüm kullanıcılar tablo formatında gösterilir.
-
-2.3 Kullanıcı Güncelleme
-
-Kullanıcı bilgileri ve yetkileri değiştirilebilir.
-
-2.4 Kullanıcı Silme
-
-Kullanıcı ID bazında silinir.
-
-3. Stok Hareketleri
-
-3.1 Stok Girişi ve Çıkışı
-
-Hareket tipi, tarih ve kullanıcı bilgileri hareket.csv dosyasına eklenir.
-
-Mevcut stok miktarı otomatik güncellenir.
-
-3.2 Hareket Listeleme
-
-Tüm hareketler tarih ve tip bazında detaylandırılır.
-
-4. Program Yönetimi
-
-4.1 Disk Alanı Gösterimi
-
-Tüm veri dosyalarının toplam boyutu hesaplanır ve gösterilir.
-
-4.2 Dosya Yedekleme
-
-depo.csv, kullanici.csv ve hareket.csv dosyaları bir yedek klasörüne kopyalanır.
-
-4.3 Hata Kayıtları
-
-log.csv dosyasındaki hatalar detaylı olarak incelenebilir.
-
-Kurulum
-
-Gereksinimler
-
-Linux ortamı
-
-Zenity'nin kurulu olması
-
-Bash desteği
-
-Adımlar
-
-Proje dosyalarını klonlayın:
-
-git clone <repo-link>
-
-Script dosyalarına çalıştırma izni verin:
-
-chmod +x *.sh
-
-Programı başlatın:
-
-./main.sh
+İyi çalışmalar!
