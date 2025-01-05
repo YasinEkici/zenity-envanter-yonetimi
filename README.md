@@ -79,8 +79,7 @@ proje-klasoru/
 ├── log.csv                       # Hata ve kritik işlem log kayıtları
 └── hareket.csv                   # Stok hareketleri (giriş/çıkış)
 
-
-Kurulum ve Çalıştırma
+##Kurulum ve Çalıştırma
 
     Zenity’nin kurulu olduğundan emin olun
         Çoğu Linux dağıtımında ön yüklü gelir. Eğer eksikse, Ubuntu/Debian türevi sistemlerde:
@@ -102,7 +101,7 @@ main.sh betiğini çalıştırın
 
     Not: Projeyi ilk kez çalıştırdığınızda, kullanici.csv, depo.csv, log.csv ve hareket.csv yoksa otomatik oluşturulur. Ayrıca varsayılan bir yönetici kullanıcı (admin / 12345) tanımlanır.
 
-Kullanım Adımları
+##Kullanım Adımları
 
     Giriş Ekranı
         Kullanıcı adı (örn. admin) ve parola (12345) girişi yapılır.
@@ -146,7 +145,7 @@ Kullanım Adımları
         Diske Yedekle: Bu üç (veya dört) CSV dosyasını belirttiğiniz klasöre .bak uzantısıyla kopyalar.
         Hata Kayıtlarını Göster: log.csv içeriğini tablolu biçimde gösterir.
 
-CSV Dosyaları
+##CSV Dosyaları
 
 Projedeki veriler CSV dosyalarında saklanır:
 
@@ -170,7 +169,7 @@ Projedeki veriler CSV dosyalarında saklanır:
         tip: giris veya cikis.
         hareket_no otomatik artar.
 
-Ekran Görüntüleri
+##Ekran Görüntüleri
 
     Giriş Ekranı
 ![Screenshot from 2025-01-05 20-40-47](https://github.com/user-attachments/assets/befa6f5f-c0e8-4510-be67-10e7215286b1)
@@ -196,7 +195,7 @@ Ekran Görüntüleri
 
     
 
-Sık Karşılaşılan Sorunlar
+##Sık Karşılaşılan Sorunlar
 
     “Admin” olarak giriş yapamıyorum
         kullanici.csv içinde 2. sütundaki username değeri “admin” mi kontrol edin. Parola 12345 (MD5: 827ccb0eea8a706c4c34a16891f84e7b) olmalı.
