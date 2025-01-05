@@ -1,0 +1,35 @@
+ERR001,2025-01-03 20:23:36,Admin,Giriş Denemesi,Kullanıcı bulunamadı
+ERR001,2025-01-03 20:23:52,Admin,Giriş Denemesi,Kullanıcı bulunamadı
+ERR001,2025-01-03 20:24:10,admin,Giriş Denemesi,Kullanıcı bulunamadı
+ERR001,2025-01-03 20:26:33,admin,Giriş Denemesi,Kullanıcı bulunamadı
+ERR001,2025-01-03 20:30:45,Admin,Giriş Denemesi,Kullanıcı bulunamadı
+ERR001,2025-01-03 20:31:23,Admin,Giriş Denemesi,Kullanıcı bulunamadı
+ERR001,2025-01-04 12:42:24,Admin,Giriş Denemesi,Kullanıcı bulunamadı
+ERR_PROD_005,2025-01-04 12:52:06,Admin,Ürün Güncelleme,Ürün yok (M16)
+ERR_PROD_005,2025-01-04 12:52:23,Admin,Ürün Güncelleme,Ürün yok (1)
+ERR_PROD_005,2025-01-04 12:52:49,Admin,Ürün Güncelleme,Ürün yok (M16)
+ERR001,2025-01-04 18:55:22,asf,Giriş Denemesi,Kullanıcı bulunamadı
+ERR001,2025-01-04 18:55:28,wfw,Giriş Denemesi,Kullanıcı bulunamadı
+ERR003,2025-01-04 18:55:36,Admin,Giriş Denemesi,Hatalı parola
+ERR_PROD_005,2025-01-04 19:15:54,Admin,Ürün Güncelleme,Ürün yok (Yasin)
+ERR_PROD_008,2025-01-04 19:16:06,Admin,Ürün Silme,Ürün yok (M16)
+ERR002,2025-01-04 21:41:42,Birce Ceren,Giriş Denemesi,Kilitli hesap
+ERR003,2025-01-04 21:50:48,Admin,Giriş Denemesi,Hatalı parola
+ERR_PROD_005,2025-01-04 21:52:31,Admin,Ürün Güncelleme,Ürün yok (Yasin)
+ERR002,2025-01-05 10:35:57,Birce Ceren,Giriş Denemesi,Kilitli hesap
+ERR001,2025-01-05 10:36:14,Kasım ,Giriş Denemesi,Kullanıcı bulunamadı
+ERR003,2025-01-05 10:36:26,Kasım,Giriş Denemesi,Hatalı parola
+ERR001,2025-01-05 10:36:36,Kasım ,Giriş Denemesi,Kullanıcı bulunamadı
+ERR_PROD_005,2025-01-05 10:42:45,Admin,Ürün Güncelleme,Ürün yok (S24+)
+ERR_PROD_008,2025-01-05 10:46:13,Admin,Ürün Silme,Ürün yok (S24+)
+ERR_PROD_005,2025-01-05 10:46:23,Admin,Ürün Güncelleme,Ürün yok (S24+)
+ERR001,2025-01-05 11:04:14,Yasin,Giriş Denemesi,Kullanıcı bulunamadı
+ERR002,2025-01-05 11:04:24,Birce Ceren,Giriş Denemesi,Kilitli hesap
+ERR_USER_004,2025-01-05 14:08:52,1,Kullanıcı Silme,Bulunamadı (33)
+ERR_PROD_002,2025-01-05 14:12:52,1,Ürün Ekleme,Geçersiz stok ()
+ERR_PROD_005,2025-01-05 14:28:17,1,Ürün Güncelleme,Ürün yok (4)
+ERR_PROD_005,2025-01-05 14:28:26,1,Ürün Güncelleme,Ürün yok (adsda)
+ERR_PROD_004,2025-01-05 15:23:26,1,Ürün Ekleme,Aynı ürün adı (Kalem)
+ERR_PROD_001,2025-01-05 15:24:46,1,Ürün Ekleme,Boşluk hatası (Asus G15/Bilgisayar)
+ERR_USER_001,2025-01-05 19:04:23,1,Kullanıcı Ekle,Boş alan
+ERR_PROD_002,2025-01-05 19:05:23,1,Ürün Ekleme,Geçersiz stok ()
