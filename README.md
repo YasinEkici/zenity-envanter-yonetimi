@@ -38,20 +38,6 @@ Genel Özellikler
     Program Yönetimi bölümünde disk alanı gösterme, dosyaları yedekleme ve log görüntüleme işlemleri vardır.
     Ani kapatma durumlarında (Ctrl + C vb.) trap mekanizmasıyla temizKapat fonksiyonu çağrılır, geçici dosyalar silinir ve log kayıtları güncellenir.
 
-Proje Dosya Yapısı
-
-proje-klasoru/
-├── main.sh                       # Ana betik, uygulama burada başlatılıyor
-├── moduller/
-│   ├── program_yonetimi.sh       # Program yönetimi (yedek alma, disk alanı, log gösterme)
-│   ├── urun_yonetimi.sh          # Ürün ekle, listele, güncelle, sil
-│   ├── rapor_al.sh              # Rapor modülü (stok eşiği, fiyat aralığı vb.)
-│   ├── hareket_yonetimi.sh       # Stok giriş/çıkış yönetimi (hareket kayıtları)
-│   └── kullanici_yonetimi.sh     # Kullanıcı ekleme, listeleme, güncelle, sil
-├── depo.csv                      # Ürün kayıtları
-├── kullanici.csv                 # Kullanıcı bilgileri
-├── log.csv                       # Hata ve kritik işlemlerin kaydı
-└── hareket.csv                   # Stok hareket kayıtları
 
     main.sh: Projenin başlangıç dosyası. Giriş (login) ve ana menü burada yer alır.
     moduller/ dizini: Her bir alt fonksiyonun (program yönetimi, ürün yönetimi vs.) kendi betiği bulunur.
@@ -66,7 +52,7 @@ Kurulum ve Çalıştırma
 
 Proje klasörünü klonlayın veya indirin
 
-git clone https://github.com/kullanici-adi/envanter.git
+git clone https://github.com/YasinEkici/zenity-envanter-yonetimi
 cd envanter
 
 Dosyaya çalıştırma izni verin
