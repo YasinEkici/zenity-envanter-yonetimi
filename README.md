@@ -16,14 +16,14 @@ gibi işlemler **Zenity** pencereleri ile bir **grafik arayüz** üzerinden yap�
 
 ## İçindekiler
 
-- [Özellikler](#özellikler)
-- [Proje Dosya Yapısı](#proje-dosya-yapısı)
-- [Kurulum ve Çalıştırma](#kurulum-ve-çalıştırma)
-- [Kullanım Adımları](#kullanım-adımları)
-- [CSV Dosyaları](#csv-dosyaları)
-- [Ekran Görüntüleri](#ekran-görüntüleri)
-- [Sık Karşılaşılan Sorunlar](#sık-karşılaşılan-sorunlar)
-- [Katkıda Bulunma](#katkıda-bulunma)
+- Özellikler
+- Proje Dosya Yapısı
+- Kurulum ve Çalıştırma
+- Kullanım Adımları
+- CSV Dosyaları
+- Ekran Görüntüleri
+- Sık Karşılaşılan Sorunlar
+- Katkıda Bulunma
 
 ---
 
