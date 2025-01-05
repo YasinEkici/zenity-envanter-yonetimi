@@ -145,9 +145,8 @@ Projedeki veriler CSV dosyalarında saklanır:
 
 Ekran Görüntüleri
 
-(Aşağıdaki görseller örnektir; kendi projenizi çalıştırdığınızda Ekran Görüntüsü alıp bu bölüme ekleyebilirsiniz.)
-
     Giriş Ekranı
+![Screenshot from 2025-01-05 20-40-47](https://github.com/user-attachments/assets/befa6f5f-c0e8-4510-be67-10e7215286b1)
 
     Ana Menü
 
