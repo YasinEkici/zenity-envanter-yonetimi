@@ -1,0 +1,1 @@
+# zenity-envanter-yonetimi
