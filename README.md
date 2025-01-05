@@ -1,6 +1,10 @@
-Basit Envanter Yönetim Sistemi (Zenity + Bash)
+Envanter Yönetim Sistemi (Zenity + Bash)
 
-Bu proje, Bash betikleri ve Zenity kütüphanesi kullanılarak oluşturulmuş basit bir Envanter Yönetim Sistemi örneğidir. Projede aşağıdaki fonksiyonları gerçekleştirebilen bir grafik arayüz (GUI) sunulur:
+Bu proje, Bash betikleri ve Zenity kütüphanesi kullanılarak oluşturulmuş basit bir Envanter Yönetim Sistemi örneğidir. 
+
+YouTube Videosu: https://www.youtube.com/watch?v=cLIV2NU-BiA
+
+Projede aşağıdaki fonksiyonları gerçekleştirebilen bir grafik arayüz (GUI) sunulur:
 
     Ürün Yönetimi (Ekle / Listele / Güncelle / Sil)
     Stok Hareketleri (Giriş / Çıkış / Listeleme)
