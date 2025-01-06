@@ -214,6 +214,6 @@ Katkıda Bulunma
     Yeni rapor türleri, ek validasyon kuralları veya arayüz iyileştirmeleri memnuniyetle karşılanır.
     Hata veya önerileriniz için issue açabilirsiniz.
 
-Teşekkürler! Bu basit envanter yönetim sistemi örneğini geliştirirken keyif alacağınızı umuyoruz. Bash ve Zenity ile daha büyük projeler yapabilmek için bu örneği başlangıç noktası olarak kullanabilirsiniz.
+Teşekkürler! Bash ve Zenity ile daha büyük projeler yapabilmek için bu örneği başlangıç noktası olarak kullanabilirsiniz.
 
 İyi çalışmalar!
