@@ -126,32 +126,31 @@ chmod +x main.sh
 ## Ekran Görüntüleri
 
 ### Giriş Ekranı
-![Giriş Ekranı](![image](https://github.com/user-attachments/assets/cb1b8274-6c1c-4100-97c0-3603f0e09881)
-)
+![image](https://github.com/user-attachments/assets/cb1b8274-6c1c-4100-97c0-3603f0e09881)
+
 
 ### Ana Menü
-![Ana Menü](![image](https://github.com/user-attachments/assets/a04dff5f-a000-4791-b9ef-a5bfa7dec312)
-)
+![image](https://github.com/user-attachments/assets/a04dff5f-a000-4791-b9ef-a5bfa7dec312)
+
 
 ### Ürün İşlemleri Menüsü
-![Ürün İşlemleri](![image](https://github.com/user-attachments/assets/ab9ff059-ffa9-4cd2-beb2-5cd6bc84979f)
-)
+![image](https://github.com/user-attachments/assets/ab9ff059-ffa9-4cd2-beb2-5cd6bc84979f)
+
 
 ### Stok Hareketi Menüsü
 ![image](https://github.com/user-attachments/assets/0b35e36f-6546-4b38-a300-4e72b9cc1234)
-)
 
 ### Rapor Al Menüsü
-![Raporlama](![image](https://github.com/user-attachments/assets/f8205dcf-0874-402d-b9db-416f88536bec)
-)
+![image](https://github.com/user-attachments/assets/f8205dcf-0874-402d-b9db-416f88536bec)
+
 
 ### Kullanıcı Yönetimi Menüsü 
-![Kullanıcı Yönetimi](![image](https://github.com/user-attachments/assets/3ae95fc5-bc47-4e3c-9d60-137e608640e7)
-)
+![image](https://github.com/user-attachments/assets/3ae95fc5-bc47-4e3c-9d60-137e608640e7)
+
 
 ### Program Yönetimi Menüsü
-![Program Yönetimi](![image](https://github.com/user-attachments/assets/8b28d723-4b60-4abe-bf92-161a0cacca72)
-)
+![image](https://github.com/user-attachments/assets/8b28d723-4b60-4abe-bf92-161a0cacca72)
+
 ---
 
 ## 👨‍💻 Geliştirici Bilgisi
