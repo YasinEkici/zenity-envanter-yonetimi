@@ -138,7 +138,7 @@ chmod +x main.sh
 )
 
 ### Stok Hareketi Menüsü
-![Stok Hareketi](![image](https://github.com/user-attachments/assets/0b35e36f-6546-4b38-a300-4e72b9cc1234)
+![image](https://github.com/user-attachments/assets/0b35e36f-6546-4b38-a300-4e72b9cc1234)
 )
 
 ### Rapor Al Menüsü
