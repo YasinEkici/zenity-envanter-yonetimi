@@ -69,7 +69,7 @@ Zenity ile görsel bir arayüz kullanarak envanter işlemlerini kolaylaştıran 
 ### Adım 1: Projeyi Klonlayın
 ```bash
 # Projeyi klonlayın ve dizine girin
-git clone https://github.com/kullaniciadi/envanter-yonetim.git
+git clone https://github.com/YasinEkici/zenity-envanter-yonetimi/
 cd envanter-yonetim
 ```
 
