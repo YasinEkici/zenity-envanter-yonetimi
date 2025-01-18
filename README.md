@@ -1,37 +1,70 @@
 YouTube Videosu: https://www.youtube.com/watch?v=cLIV2NU-BiA
+# 📦 **Zenity Kullanarak Envanter Yönetimi Projesi**
 
-# 📦 Envanter Yönetim Sistemi 🚀
-Zenity tabanlı, **Bash Script** kullanılarak geliştirilmiş, kullanıcı dostu bir **Envanter Yönetim Sistemi** ile tanışın! Bu sistem, küçük veya orta ölçekli işletmelerin ürün, kullanıcı, stok hareketleri ve raporlarını kolayca yönetmesini sağlamak için tasarlanmıştır.
+**Zenity ve Bash ile geliştirilmiş bir envanter yönetim sistemi.**  
+Bu proje, kullanıcı dostu arayüzü ve güçlü özellikleriyle ürünlerinizi ve stoklarınızı kolayca yönetmenizi sağlar.
+
+---
+
+## 🔖 **İçindekiler**
+1. [Proje Özeti](#proje-özeti)
+2. [Özellikler](#özellikler)
+3. [Kurulum](#kurulum)
+4. [Kullanım](#kullanım)
+5. [Dosya Yapısı](#dosya-yapısı)
+6. [Ekran Görüntüleri](#ekran-görüntüleri)
+7. [Geliştirici Bilgisi](#geliştirici-bilgisi)
+8. [Lisans](#lisans)
 
 ---
 
-## 🚀 Özellikler
-
-### ✅ **Kapsamlı Kullanıcı Yönetimi**
-- Yeni kullanıcı ekleyin, mevcut kullanıcıları listeleyin, güncelleyin veya silin.
-- Kullanıcı rolleri: **Yönetici** ve **Kullanıcı**.
-- Hatalı parola girişlerinde **hesap kilitleme** mekanizması (3 deneme hakkı).
-
-### 🛒 **Ürün Yönetimi**
-- Ürün ekleme, listeleme, güncelleme ve silme işlemleri.
-- Kategori bazlı ürün yönetimi.
-- **Gerçek zamanlı stok bilgisi güncelleme**.
-
-### 📊 **Raporlama ve Analiz**
-- Stok miktarına göre **azalan ürün raporu**.
-- **Kategori bazlı rapor** ve **fiyat aralığı raporları**.
-- Stok hareketlerini ve detaylı log kayıtlarını görüntüleme.
-
-### 🔄 **Stok Hareketi Yönetimi**
-- **Stok giriş-çıkış** işlemleri.
-- Detaylı hareket geçmişi: Tarih, işlem tipi, kullanıcı ve miktar bilgileri.
-
-### 🧰 **Program Yönetimi**
-- Toplam veri boyutunu öğrenin.
-- Veritabanı dosyalarını yedekleyin.
-- Hata loglarını inceleyin.
+## 📃 **Proje Özeti**
+Zenity ile görsel bir arayüz kullanarak envanter işlemlerini kolaylaştıran bu proje, işletmeler için güçlü bir çözüm sunar. Ürünlerin eklenmesi, stok hareketlerinin kaydedilmesi ve rapor alınması gibi birçok işlem yapılabilir.
 
 ---
+
+## ✨ **Özellikler**
+
+### 🔑 **Giriş ve Kullanıcı Yönetimi**
+- 🧑‍💻 **Kullanıcı Girişi:** Kullanıcı adı ve parola doğrulama.
+- 🔐 **Güvenlik:** Hatalı parola denemelerinde hesap kilitleme.
+- 🛠️ **Kullanıcı İşlemleri:**
+  - Yeni kullanıcı ekleme.
+  - Kullanıcı bilgilerini güncelleme.
+  - Kullanıcı listeleme ve silme.
+
+### 📦 **Ürün ve Stok Yönetimi**
+- 🛒 **Ürün İşlemleri:**
+  - Yeni ürün ekleme.
+  - Ürün bilgilerini güncelleme.
+  - Ürün listeleme ve silme.
+- 📈 **Stok Hareketleri:**
+  - Stok giriş ve çıkış işlemleri.
+  - Stok hareket geçmişi görüntüleme.
+
+### 📊 **Raporlama**
+- Dinamik rapor türleri:
+  - Azalan stok raporu.
+  - Yüksek stok raporu.
+  - Kategori bazlı rapor.
+  - Fiyat aralığı raporu.
+
+### 🛠️ **Program Yönetimi**
+- 📂 **Disk Alanı Kullanımı:** Veri dosyalarının boyutlarını görüntüleme.
+- 💾 **Yedekleme:** Veri dosyalarını güvenli bir şekilde yedekleme.
+- 📋 **Hata Kayıtları:** Sistem hatalarını detaylı görüntüleme.
+
+---
+
+## ⚙️ **Kurulum**
+
+### Gerekli Bileşenler
+- **Linux Dağıtımı** (Ubuntu, Debian, vb.)
+- **Zenity**  
+  Yüklemek için:
+  ```bash
+  sudo apt-get install zenity
+
 
 ## 📂 Kullanılan Dosyalar ve Amaçları
 Proje, 4 temel veri dosyası kullanır:
@@ -52,89 +85,96 @@ Proje, 4 temel veri dosyası kullanır:
 - `bash` (Bash Script çalıştırabilmek için).
 - `zenity` (GUI dialog pencereleri için).
 
-#### Zenity Kurulumu
-Eğer sisteminizde `zenity` yüklü değilse, aşağıdaki komutlarla yükleyebilirsiniz:
+# Envanter Yönetim Sistemi
+
+## 🚀 Adım Adım Kurulum
+
+### Adım 1: Projeyi Klonlayın
 ```bash
-# Debian/Ubuntu
-sudo apt install zenity
+# Projeyi klonlayın ve dizine girin
+git clone https://github.com/kullaniciadi/envanter-yonetim.git
+cd envanter-yonetim
+```
 
-# RedHat/CentOS
-sudo yum install zenity
+### Adım 2: Çalıştırılabilirlik Verin
+```bash
+# main.sh dosyasına çalıştırma yetkisi verin
+chmod +x main.sh
+```
 
-🚀 Kurulum Adımları
-Projeyi klonlayın:
-
-bash
-Kopyala
-git clone https://github.com/kullanici_adi/envanter-yonetim-sistemi.git
-cd envanter-yonetim-sistemi
-Script dosyalarına çalıştırılabilir izinler verin:
-
-bash
-Kopyala
-chmod +x main.sh moduller/*.sh
-Gerekli dosyaların oluşturulduğundan emin olun:
-
-İlk çalıştırmada main.sh, gerekli olan depo.csv, kullanici.csv, hareket.csv ve log.csv dosyalarını otomatik olarak oluşturur.
-Ana script'i başlatın:
-
-bash
-Kopyala
+### Adım 3: Uygulamayı Başlatın
+```bash
+# Uygulamayı başlatmak için main.sh dosyasını çalıştırın
 ./main.sh
-📋 Kullanım Rehberi
-🔐 Giriş Yapma
-İlk başta sistemde yalnızca admin kullanıcısı bulunur.
-Kullanıcı Adı: admin
-Parola: 12345
-Yönetici, yeni kullanıcılar ekleyerek sistemi özelleştirebilir.
-🏗️ Ana Menü
-Sistemde oturum açtıktan sonra karşınıza aşağıdaki menü gelecektir:
+```
 
-Yönetici Menüsü
-Ürün İşlemleri
-Ürün ekleme, listeleme, güncelleme ve silme işlemleri.
-Stok Hareketi
-Stok giriş-çıkış işlemleri ve hareketleri görüntüleme.
-Rapor Al
-Azalan ürün, kategori bazlı veya fiyat aralığı raporları.
-Kullanıcı Yönetimi
-Kullanıcı ekleme, düzenleme veya silme işlemleri.
-Program Yönetimi
-Veri boyutu kontrolü, yedekleme ve log görüntüleme.
-Çıkış
-Oturumu sonlandırın.
-Kullanıcı Menüsü
-Kullanıcı yetkisine sahip kullanıcılar yalnızca ürün listeleme ve raporlama işlemlerine erişebilir.
-📌 Önemli Notlar
-CSV Formatı: Sistem tüm verileri CSV formatında saklar. Bu, verilerin Excel veya diğer programlarla kolayca düzenlenmesini sağlar.
-Güvenlik: Parolalar MD5 hash ile saklanır. (Not: MD5 günümüzde güçlü bir hashleme yöntemi olarak kabul edilmemektedir, ancak bu bir örnek projedir.)
-Hata Yönetimi: Her işlem sırasında oluşabilecek hatalar, log.csv dosyasına detaylı şekilde kaydedilir.
-🤝 Katkıda Bulunma
-Projeye katkıda bulunmak için aşağıdaki adımları takip edebilirsiniz:
+---
 
-Bu projeyi fork edin.
-Yeni bir dal (branch) oluşturun:
-bash
-Kopyala
-git checkout -b ozellik/yenilik
-Değişikliklerinizi yapıp commit edin:
-bash
-Kopyala
-git commit -m "Yeni özellik eklendi: X"
-Dalınızı bu repoya push edin:
-bash
-Kopyala
-git push origin ozellik/yenilik
-Bir Pull Request (PR) açın ve katkıda bulunun!
-📷 Ekran Görüntüleri
-Giriş Ekranı	Ana Menü (Yönetici)	Ürün İşlemleri
-📜 Lisans
-Bu proje, MIT Lisansı ile lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasını inceleyebilirsiniz.
+## 🛠️ Kullanım
 
-👨‍💻 Geliştirici
-Adınız veya Kullanıcı Adınız
-GitHub: GitHub Profiliniz
-LinkedIn: LinkedIn Profiliniz
+### Uygulamanın Çalıştırılması
+- **main.sh** dosyasını çalıştırarak uygulamayı başlatın.
+- İlk kez çalıştırıldığında varsayılan yönetici hesabı otomatik olarak oluşturulur:
+  - **Kullanıcı Adı:** `admin`
+  - **Parola:** `12345`
 
-🎉 Teşekkürler
-Bu projeyi incelediğiniz için teşekkür ederim! Her türlü öneri ve geri bildirime açığım. 🙌
+### Önemli Notlar
+- Tüm işlemler CSV dosyalarında tutulur.
+- Kullanıcı yetkisine göre işlem kısıtlamaları bulunmaktadır.
+- Kullanıcı adı veya parola üç kez yanlış girilirse hesap kilitlenir.
+
+---
+
+## 📂 Dosya Yapısı
+
+### 📜 Ana Scriptler
+- `main.sh`: Uygulamanın giriş noktası.
+- `moduller/`:
+  - `urun_yonetimi.sh`: Ürün işlemleri.
+  - `hareket_yonetimi.sh`: Stok hareketleri.
+  - `rapor_al.sh`: Raporlama modülü.
+  - `kullanici_yonetimi.sh`: Kullanıcı işlemleri.
+  - `program_yonetimi.sh`: Sistem yönetimi.
+
+### 📁 Veri Dosyaları
+| Dosya          | Açıklama                                      |
+|-----------------|----------------------------------------------|
+| `depo.csv`     | Ürün bilgileri ve stok miktarları.           |
+| `kullanici.csv`| Kullanıcı bilgileri.                         |
+| `hareket.csv`  | Stok hareket kayıtları.                      |
+| `log.csv`      | Sistem hataları ve önemli olaylar.           |
+
+---
+
+## 🖼️ Ekran Görüntüleri
+
+### Giriş Ekranı
+![Giriş Ekranı](images/giris_ekrani.png)
+
+### Ana Menü
+![Ana Menü](images/ana_menu.png)
+
+### Raporlama
+![Raporlama](images/raporlama.png)
+
+---
+
+## 👨‍💻 Geliştirici Bilgisi
+
+Bu proje, işletmelerin stoklarını daha verimli yönetmesine yardımcı olmak amacıyla geliştirilmiştir. 🛠️
+
+- **İsim:** [Adınız]
+- **GitHub:** [github.com/kullaniciadi](https://github.com/kullaniciadi)
+- **E-posta:** email@domain.com
+
+---
+
+## 📜 Lisans
+
+Bu proje **MIT Lisansı** ile lisanslanmıştır. İstediğiniz gibi kullanabilir, değiştirebilir ve dağıtabilirsiniz. 🌟
+
+---
+
+## 🚀 Hadi, başlayalım!
+
+- Projeyi klonlayın, çalıştırın ve kolayca envanterinizi yönetin!
