@@ -12,7 +12,7 @@ Bu proje, kullanıcı dostu arayüzü ve güçlü özellikleriyle ürünlerinizi
 3. [Kurulum](#-kurulum)
 4. [Kullanım](#-kullanım)
 5. [Dosya Yapısı](#-dosya-yapısı)
-6. [Ekran Görüntüleri](#-ekran-görüntüleri)
+6. [Ekran Görüntüleri](#%EF&B8%8F-ekran-görüntüleri)
 7. [Geliştirici Bilgisi](#-geliştirici-bilgisi)
 8. [Lisans](#-lisans)
 
