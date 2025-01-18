@@ -161,8 +161,6 @@ chmod +x main.sh
 
 ## 👨‍💻 Geliştirici Bilgisi
 
-Bu proje, işletmelerin stoklarını daha verimli yönetmesine yardımcı olmak amacıyla geliştirilmiştir. 🛠️
-
 - **İsim:** Yasin Ekici
 - **GitHub:** https://github.com/YasinEkici
 - **LinkedIn** https://www.linkedin.com/in/yasin-ekici-807951255
