@@ -96,9 +96,15 @@ chmod +x main.sh
   - **Parola:** `12345`
 
 ### Önemli Notlar
-- Tüm işlemler CSV dosyalarında tutulur.
-- Kullanıcı yetkisine göre işlem kısıtlamaları bulunmaktadır.
-- Kullanıcı adı veya parola üç kez yanlış girilirse hesap kilitlenir.
+- Kullanıcı Hesap Güvenliği: Sistemde kullanıcıların güvenliği ön planda tutulmuştur. Giriş sırasında hatalı parola üç kez girilirse hesap otomatik olarak kilitlenir. Bu özellik, sistemin güvenliğini artırarak yetkisiz erişimleri engeller. Kilidi yöentici açabilir, ayrıca yanlış girilme sayısı yönetici tarafından değiştirilebilir ve hesap kitlenebilir.
+- Veri Tutarlılığı ve Güvenli İşlem: Tüm işlemler sırasında geçici dosyalar kullanılarak veri tutarlılığı sağlanır. Geçici dosyalar, işlemler tamamlandığında asıl dosyalarla değiştirilir ve bu yöntem veri kaybını önlemek için güvenli bir altyapı sunar.
+- Zenity Kullanımı ile Kullanıcı Dostu Arayüz: Bash Script tabanlı bir uygulama olmasına rağmen, Zenity ile görsel bir arayüz sunularak kullanıcı deneyimi zenginleştirilmiştir. Zenity'nin ikonlar, formlar ve renkli mesajlar gibi özellikleri sayesinde kullanıcılar rahatlıkla işlem yapabilir.
+- Kullanıcı Yetkilendirmesi: Sistemde iki farklı kullanıcı rolü bulunmaktadır: Yönetici ve Kullanıcı. Yönetici hesapları, daha geniş yetkilere sahip olup ürün ekleme, silme ve sistem yedekleme, hareket işlemlerini yönetme gibi işlemleri gerçekleştirebilir. Bu sayede rol bazlı bir erişim kontrolü sağlanmıştır.
+- Hata Kayıtları ve İzlenebilirlik: Sistem, gerçekleşen tüm önemli olayları ve hataları log.csv dosyasına kaydederek izlenebilirlik sağlar. Bu özellik, kullanıcıların yaptıkları işlemleri detaylı bir şekilde takip edebilmesine olanak tanır.
+- Raporlama modülü sayesinde kullanıcılar: Stok eşiğine göre ürünleri görüntüleyebilir, belirli bir kategoriye ait ürünleri listeleyebilir, fiyat aralığına göre ürün filtrelemesi yapabilir. Bu özellikler, işletmelerin stok durumunu daha iyi anlamasına ve verimli kararlar almasına yardımcı olur.
+- Yedekleme ve Disk Alanı Kontrolü: Uygulama, veri dosyalarını kolayca yedekleme imkanı sunar. Ayrıca, depo.csv, kullanici.csv gibi dosyaların toplam disk alanı kullanımını görüntüleyerek sistemin performansını kontrol etmeye olanak tanır.
+- Kolay Kurulum ve Kullanım: Proje, birkaç basit komutla çalıştırılabilir hale gelir ve her seviyeden kullanıcı için kolaylık sağlar. Kullanıcı dostu yapısı, projeyi herkesin rahatlıkla kullanabileceği bir çözüm haline getirir.
+
 
 ---
 
@@ -157,9 +163,10 @@ chmod +x main.sh
 
 Bu proje, işletmelerin stoklarını daha verimli yönetmesine yardımcı olmak amacıyla geliştirilmiştir. 🛠️
 
-- **İsim:** [Adınız]
-- **GitHub:** [github.com/kullaniciadi](https://github.com/kullaniciadi)
-- **E-posta:** email@domain.com
+- **İsim:** Yasin Ekici
+- **GitHub:** https://github.com/YasinEkici
+- **LinkedIn** https://www.linkedin.com/in/yasin-ekici-807951255
+- **E-posta:** yasinekici021@outlook.com
 
 ---
 
