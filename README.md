@@ -1,4 +1,4 @@
-YouTube Videosu: https://www.youtube.com/watch?v=cLIV2NU-BiA
+[Projei detaylarıyla ele alan YouTube Videosu](https://www.youtube.com/watch?v=cLIV2NU-BiA)
 # 📦 **Zenity Kullanarak Envanter Yönetimi Projesi**
 
 **Zenity ve Bash ile geliştirilmiş bir envanter yönetim sistemi.**  
@@ -56,28 +56,6 @@ Zenity ile görsel bir arayüz kullanarak envanter işlemlerini kolaylaştıran 
 
 ---
 
-## ⚙️ **Kurulum**
-
-### Gerekli Bileşenler
-- **Linux Dağıtımı** (Ubuntu, Debian, vb.)
-- **Zenity**  
-  Yüklemek için:
-  ```bash
-  sudo apt-get install zenity
-
-
-## 📂 Kullanılan Dosyalar ve Amaçları
-Proje, 4 temel veri dosyası kullanır:
-
-| **Dosya Adı**    | **Açıklama**                                                                 |
-|-------------------|------------------------------------------------------------------------------|
-| `depo.csv`       | Ürün bilgilerini ve stok miktarlarını tutar.                                 |
-| `kullanici.csv`  | Kullanıcı bilgilerini ve rollerini içerir.                                   |
-| `hareket.csv`    | Stok giriş-çıkış hareketlerini kaydeder.                                     |
-| `log.csv`        | Hatalar, uyarılar ve kullanıcı hareketlerini kayıt altına alır (log dosyası).|
-
----
-
 ## 💻 Kurulum ve Çalıştırma
 
 ### 🛠️ **Gereksinimler**
@@ -85,7 +63,6 @@ Proje, 4 temel veri dosyası kullanır:
 - `bash` (Bash Script çalıştırabilmek için).
 - `zenity` (GUI dialog pencereleri için).
 
-# Envanter Yönetim Sistemi
 
 ## 🚀 Adım Adım Kurulum
 
