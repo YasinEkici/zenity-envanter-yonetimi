@@ -7,14 +7,14 @@ Bu proje, kullanıcı dostu arayüzü ve güçlü özellikleriyle ürünlerinizi
 ---
 
 ## 🔖 **İçindekiler**
-1. [Proje Özeti](#proje-özeti)
-2. [Özellikler](#özellikler)
-3. [Kurulum](#kurulum)
-4. [Kullanım](#kullanım)
-5. [Dosya Yapısı](#dosya-yapısı)
-6. [Ekran Görüntüleri](#ekran-görüntüleri)
-7. [Geliştirici Bilgisi](#geliştirici-bilgisi)
-8. [Lisans](#lisans)
+1. [Proje Özeti](#-proje-özeti)
+2. [Özellikler](#-özellikler)
+3. [Kurulum](#-kurulum)
+4. [Kullanım](#-kullanım)
+5. [Dosya Yapısı](#-dosya-yapısı)
+6. [Ekran Görüntüleri](#-ekran-görüntüleri)
+7. [Geliştirici Bilgisi](#-geliştirici-bilgisi)
+8. [Lisans](#-lisans)
 
 ---
 
