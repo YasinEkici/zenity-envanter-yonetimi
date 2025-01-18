@@ -1,5 +1,5 @@
 [Projei detaylarıyla ele alan YouTube Videosu](https://www.youtube.com/watch?v=cLIV2NU-BiA)
-# 📦 **Zenity Kullanarak Envanter Yönetimi Projesi**
+# 📦 **Zenity İle Envanter Yönetimi Projesi**
 
 **Zenity ve Bash ile geliştirilmiş bir envanter yönetim sistemi.**  
 Bu proje, kullanıcı dostu arayüzü ve güçlü özellikleriyle ürünlerinizi ve stoklarınızı kolayca yönetmenizi sağlar.
